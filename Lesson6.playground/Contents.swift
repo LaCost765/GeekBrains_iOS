@@ -77,7 +77,8 @@ class Queue<T: Equatable>
     }
     
     func Clear() {
-        while let _ = self.Dequeue() { }
+        firstNode = nil
+        //while let _ = self.Dequeue() { }
         self.count = 0
     }
     
