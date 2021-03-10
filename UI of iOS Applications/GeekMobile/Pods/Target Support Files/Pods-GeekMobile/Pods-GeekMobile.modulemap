@@ -1,0 +1,6 @@
+framework module Pods_GeekMobile {
+  umbrella header "Pods-GeekMobile-umbrella.h"
+
+  export *
+  module * { export * }
+}

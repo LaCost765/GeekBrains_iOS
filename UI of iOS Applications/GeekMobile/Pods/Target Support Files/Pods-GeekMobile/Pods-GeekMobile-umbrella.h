@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_ClientVKVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_ClientVKVersionString[];
+FOUNDATION_EXPORT double Pods_GeekMobileVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_GeekMobileVersionString[];
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		448048C502A84F937CEDAA65 /* Pods_GeekMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B0DA868FF787F1EBDEEA8C /* Pods_GeekMobile.framework */; };
 		7421298125F8F1020057E05C /* UIScrollableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7421298025F8F1020057E05C /* UIScrollableViewController.swift */; };
 		7435775925F2EFB300380C6D /* FriendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7435775825F2EFB300380C6D /* FriendViewModel.swift */; };
 		7443E10825F2EC5300445507 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7443E10725F2EC5300445507 /* FriendTableViewCell.swift */; };
@@ -30,11 +31,11 @@
 		74B20B0225F8DC0C0065BB9F /* UIPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B20B0125F8DC0C0065BB9F /* UIPaddingLabel.swift */; };
 		74CCC31A25F58510003F0C0C /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCC31925F58510003F0C0C /* ViewControllerExtensions.swift */; };
 		74D1B9DE25F581D800400B67 /* GlobalGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D1B9DD25F581D800400B67 /* GlobalGroupsViewController.swift */; };
-		EBE17AE384C1FF295702F1BE /* Pods_ClientVK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8EFD1D54D01EE664116F1DC /* Pods_ClientVK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		400C35FA34BEE26AFBA30117 /* Pods-ClientVK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClientVK.debug.xcconfig"; path = "Target Support Files/Pods-ClientVK/Pods-ClientVK.debug.xcconfig"; sourceTree = "<group>"; };
+		123E1690E2CEA0E09D1B1A10 /* Pods-GeekMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekMobile.release.xcconfig"; path = "Target Support Files/Pods-GeekMobile/Pods-GeekMobile.release.xcconfig"; sourceTree = "<group>"; };
+		59B0DA868FF787F1EBDEEA8C /* Pods_GeekMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7421298025F8F1020057E05C /* UIScrollableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollableViewController.swift; sourceTree = "<group>"; };
 		7435775825F2EFB300380C6D /* FriendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewModel.swift; sourceTree = "<group>"; };
 		7443E10725F2EC5300445507 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
@@ -45,7 +46,7 @@
 		7443EE3125F5712C001713A9 /* GroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
 		7443EE3425F571EB001713A9 /* GroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewModel.swift; sourceTree = "<group>"; };
 		74449B2925F3FA210071272A /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
-		74485B8225EA7AD600EA87E0 /* ClientVK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClientVK.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74485B8225EA7AD600EA87E0 /* GeekMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeekMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74485B8525EA7AD600EA87E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74485B8725EA7AD600EA87E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		74485B8C25EA7AD600EA87E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,8 +61,7 @@
 		74B20B0125F8DC0C0065BB9F /* UIPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPaddingLabel.swift; sourceTree = "<group>"; };
 		74CCC31925F58510003F0C0C /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		74D1B9DD25F581D800400B67 /* GlobalGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalGroupsViewController.swift; sourceTree = "<group>"; };
-		762ECDC27F0013B453EAF00C /* Pods-ClientVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClientVK.release.xcconfig"; path = "Target Support Files/Pods-ClientVK/Pods-ClientVK.release.xcconfig"; sourceTree = "<group>"; };
-		F8EFD1D54D01EE664116F1DC /* Pods_ClientVK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClientVK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2C9ED94B3ABB00D6D9F91DF /* Pods-GeekMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekMobile.debug.xcconfig"; path = "Target Support Files/Pods-GeekMobile/Pods-GeekMobile.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,26 +69,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBE17AE384C1FF295702F1BE /* Pods_ClientVK.framework in Frameworks */,
+				448048C502A84F937CEDAA65 /* Pods_GeekMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4E7905D721FECE246F023411 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F8EFD1D54D01EE664116F1DC /* Pods_ClientVK.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		59DE0F6F4CC14DD0E1680036 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				400C35FA34BEE26AFBA30117 /* Pods-ClientVK.debug.xcconfig */,
-				762ECDC27F0013B453EAF00C /* Pods-ClientVK.release.xcconfig */,
+				C2C9ED94B3ABB00D6D9F91DF /* Pods-GeekMobile.debug.xcconfig */,
+				123E1690E2CEA0E09D1B1A10 /* Pods-GeekMobile.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -96,22 +88,22 @@
 		74485B7925EA7AD600EA87E0 = {
 			isa = PBXGroup;
 			children = (
-				74485B8425EA7AD600EA87E0 /* ClientVK */,
+				74485B8425EA7AD600EA87E0 /* GeekMobile */,
 				74485B8325EA7AD600EA87E0 /* Products */,
 				59DE0F6F4CC14DD0E1680036 /* Pods */,
-				4E7905D721FECE246F023411 /* Frameworks */,
+				A12CD751B159F22415686671 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		74485B8325EA7AD600EA87E0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				74485B8225EA7AD600EA87E0 /* ClientVK.app */,
+				74485B8225EA7AD600EA87E0 /* GeekMobile.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		74485B8425EA7AD600EA87E0 /* ClientVK */ = {
+		74485B8425EA7AD600EA87E0 /* GeekMobile */ = {
 			isa = PBXGroup;
 			children = (
 				74CCC31825F584F7003F0C0C /* Extensions */,
@@ -125,7 +117,7 @@
 				74485B9025EA7AD600EA87E0 /* LaunchScreen.storyboard */,
 				74485B9325EA7AD600EA87E0 /* Info.plist */,
 			);
-			path = ClientVK;
+			path = GeekMobile;
 			sourceTree = "<group>";
 		};
 		74485B9A25EA7F3000EA87E0 /* ViewModels */ = {
@@ -182,26 +174,34 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		A12CD751B159F22415686671 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59B0DA868FF787F1EBDEEA8C /* Pods_GeekMobile.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		74485B8125EA7AD600EA87E0 /* ClientVK */ = {
+		74485B8125EA7AD600EA87E0 /* GeekMobile */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 74485B9625EA7AD600EA87E0 /* Build configuration list for PBXNativeTarget "ClientVK" */;
+			buildConfigurationList = 74485B9625EA7AD600EA87E0 /* Build configuration list for PBXNativeTarget "GeekMobile" */;
 			buildPhases = (
-				4A50E4DDA2708B7EC1BF97A9 /* [CP] Check Pods Manifest.lock */,
+				B360F39938316B21A7D6B301 /* [CP] Check Pods Manifest.lock */,
 				74485B7E25EA7AD600EA87E0 /* Sources */,
 				74485B7F25EA7AD600EA87E0 /* Frameworks */,
 				74485B8025EA7AD600EA87E0 /* Resources */,
-				ACB87A7BA69095538363DD04 /* [CP] Embed Pods Frameworks */,
+				3489F9B0B21792F0F0347BB1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ClientVK;
+			name = GeekMobile;
 			productName = ClientVK;
-			productReference = 74485B8225EA7AD600EA87E0 /* ClientVK.app */;
+			productReference = 74485B8225EA7AD600EA87E0 /* GeekMobile.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -218,7 +218,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 74485B7D25EA7AD600EA87E0 /* Build configuration list for PBXProject "ClientVK" */;
+			buildConfigurationList = 74485B7D25EA7AD600EA87E0 /* Build configuration list for PBXProject "GeekMobile" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -231,7 +231,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				74485B8125EA7AD600EA87E0 /* ClientVK */,
+				74485B8125EA7AD600EA87E0 /* GeekMobile */,
 			);
 		};
 /* End PBXProject section */
@@ -250,7 +250,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4A50E4DDA2708B7EC1BF97A9 /* [CP] Check Pods Manifest.lock */ = {
+		3489F9B0B21792F0F0347BB1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeekMobile/Pods-GeekMobile-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeekMobile/Pods-GeekMobile-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GeekMobile/Pods-GeekMobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B360F39938316B21A7D6B301 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -265,28 +282,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ClientVK-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-GeekMobile-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ACB87A7BA69095538363DD04 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ClientVK/Pods-ClientVK-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ClientVK/Pods-ClientVK-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ClientVK/Pods-ClientVK-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -459,13 +459,13 @@
 		};
 		74485B9725EA7AD600EA87E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 400C35FA34BEE26AFBA30117 /* Pods-ClientVK.debug.xcconfig */;
+			baseConfigurationReference = C2C9ED94B3ABB00D6D9F91DF /* Pods-GeekMobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49B53529R9;
-				INFOPLIST_FILE = ClientVK/Info.plist;
+				INFOPLIST_FILE = GeekMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -479,13 +479,13 @@
 		};
 		74485B9825EA7AD600EA87E0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 762ECDC27F0013B453EAF00C /* Pods-ClientVK.release.xcconfig */;
+			baseConfigurationReference = 123E1690E2CEA0E09D1B1A10 /* Pods-GeekMobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49B53529R9;
-				INFOPLIST_FILE = ClientVK/Info.plist;
+				INFOPLIST_FILE = GeekMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -500,7 +500,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		74485B7D25EA7AD600EA87E0 /* Build configuration list for PBXProject "ClientVK" */ = {
+		74485B7D25EA7AD600EA87E0 /* Build configuration list for PBXProject "GeekMobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74485B9425EA7AD600EA87E0 /* Debug */,
@@ -509,7 +509,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		74485B9625EA7AD600EA87E0 /* Build configuration list for PBXNativeTarget "ClientVK" */ = {
+		74485B9625EA7AD600EA87E0 /* Build configuration list for PBXNativeTarget "GeekMobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74485B9725EA7AD600EA87E0 /* Debug */,
