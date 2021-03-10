@@ -42,7 +42,7 @@ class LoginViewController: UIViewController {
         
         if viewModel.isAccessGranted(login: username, password: password) {
             let story = UIStoryboard(name: "Main", bundle:nil)
-            let vc = story.instantiateViewController(withIdentifier: "LoggedScreen")
+            let vc = story.instantiateViewController(withIdentifier: "MainTabBar")
             UIApplication.shared.windows.first?.rootViewController = vc
             UIApplication.shared.windows.first?.makeKeyAndVisible()
         } else {
