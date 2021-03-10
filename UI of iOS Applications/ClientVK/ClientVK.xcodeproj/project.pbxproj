@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7421298125F8F1020057E05C /* UIScrollableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7421298025F8F1020057E05C /* UIScrollableViewController.swift */; };
 		7435775925F2EFB300380C6D /* FriendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7435775825F2EFB300380C6D /* FriendViewModel.swift */; };
 		7443E10825F2EC5300445507 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7443E10725F2EC5300445507 /* FriendTableViewCell.swift */; };
 		7443E10B25F2ED2C00445507 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7443E10A25F2ED2C00445507 /* FriendsTableViewController.swift */; };
@@ -25,6 +26,8 @@
 		74485BA425EA83D700EA87E0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74485BA325EA83D700EA87E0 /* LoginViewModel.swift */; };
 		74485BA725EA87DD00EA87E0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74485BA625EA87DD00EA87E0 /* LoginViewController.swift */; };
 		746D309725F428C50086F0E3 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746D309625F428C50086F0E3 /* PhotoCollectionViewCell.swift */; };
+		74B20AFE25F8D9B40065BB9F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B20AFD25F8D9B40065BB9F /* SignUpViewController.swift */; };
+		74B20B0225F8DC0C0065BB9F /* UIPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B20B0125F8DC0C0065BB9F /* UIPaddingLabel.swift */; };
 		74CCC31A25F58510003F0C0C /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCC31925F58510003F0C0C /* ViewControllerExtensions.swift */; };
 		74D1B9DE25F581D800400B67 /* GlobalGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D1B9DD25F581D800400B67 /* GlobalGroupsViewController.swift */; };
 		EBE17AE384C1FF295702F1BE /* Pods_ClientVK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8EFD1D54D01EE664116F1DC /* Pods_ClientVK.framework */; };
@@ -32,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		400C35FA34BEE26AFBA30117 /* Pods-ClientVK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClientVK.debug.xcconfig"; path = "Target Support Files/Pods-ClientVK/Pods-ClientVK.debug.xcconfig"; sourceTree = "<group>"; };
+		7421298025F8F1020057E05C /* UIScrollableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollableViewController.swift; sourceTree = "<group>"; };
 		7435775825F2EFB300380C6D /* FriendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewModel.swift; sourceTree = "<group>"; };
 		7443E10725F2EC5300445507 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		7443E10A25F2ED2C00445507 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +56,8 @@
 		74485BA325EA83D700EA87E0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		74485BA625EA87DD00EA87E0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		746D309625F428C50086F0E3 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		74B20AFD25F8D9B40065BB9F /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		74B20B0125F8DC0C0065BB9F /* UIPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPaddingLabel.swift; sourceTree = "<group>"; };
 		74CCC31925F58510003F0C0C /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		74D1B9DD25F581D800400B67 /* GlobalGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalGroupsViewController.swift; sourceTree = "<group>"; };
 		762ECDC27F0013B453EAF00C /* Pods-ClientVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClientVK.release.xcconfig"; path = "Target Support Files/Pods-ClientVK/Pods-ClientVK.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 		74485B9C25EA7F4500EA87E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				74B20B0025F8DB5E0065BB9F /* CustomElements */,
 				74485BA625EA87DD00EA87E0 /* LoginViewController.swift */,
 				7443E10725F2EC5300445507 /* FriendTableViewCell.swift */,
 				7443E10A25F2ED2C00445507 /* FriendsTableViewController.swift */,
@@ -153,8 +160,18 @@
 				7443EE2A25F56FF6001713A9 /* UserGroupsViewController.swift */,
 				7443EE2E25F570C6001713A9 /* GroupTableViewCell.swift */,
 				74D1B9DD25F581D800400B67 /* GlobalGroupsViewController.swift */,
+				74B20AFD25F8D9B40065BB9F /* SignUpViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		74B20B0025F8DB5E0065BB9F /* CustomElements */ = {
+			isa = PBXGroup;
+			children = (
+				74B20B0125F8DC0C0065BB9F /* UIPaddingLabel.swift */,
+				7421298025F8F1020057E05C /* UIScrollableViewController.swift */,
+			);
+			path = CustomElements;
 			sourceTree = "<group>";
 		};
 		74CCC31825F584F7003F0C0C /* Extensions */ = {
@@ -281,13 +298,16 @@
 			files = (
 				74485BA425EA83D700EA87E0 /* LoginViewModel.swift in Sources */,
 				7443EE3225F5712C001713A9 /* GroupModel.swift in Sources */,
+				7421298125F8F1020057E05C /* UIScrollableViewController.swift in Sources */,
 				74485B8625EA7AD600EA87E0 /* AppDelegate.swift in Sources */,
 				7435775925F2EFB300380C6D /* FriendViewModel.swift in Sources */,
 				74485BA025EA7FC800EA87E0 /* LoginModel.swift in Sources */,
 				7443E10825F2EC5300445507 /* FriendTableViewCell.swift in Sources */,
+				74B20AFE25F8D9B40065BB9F /* SignUpViewController.swift in Sources */,
 				74D1B9DE25F581D800400B67 /* GlobalGroupsViewController.swift in Sources */,
 				7443EE2B25F56FF6001713A9 /* UserGroupsViewController.swift in Sources */,
 				74485BA725EA87DD00EA87E0 /* LoginViewController.swift in Sources */,
+				74B20B0225F8DC0C0065BB9F /* UIPaddingLabel.swift in Sources */,
 				7443E10E25F2EDC900445507 /* FriendModel.swift in Sources */,
 				7443E10B25F2ED2C00445507 /* FriendsTableViewController.swift in Sources */,
 				74485B8825EA7AD600EA87E0 /* SceneDelegate.swift in Sources */,
@@ -450,7 +470,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = personal.ClientVK;
+				PRODUCT_BUNDLE_IDENTIFIER = personal.GeekMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -470,7 +490,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = personal.ClientVK;
+				PRODUCT_BUNDLE_IDENTIFIER = personal.GeekMobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
