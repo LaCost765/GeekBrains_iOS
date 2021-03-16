@@ -1,16 +1,17 @@
 //
-//  SignUpViewController.swift
-//  ClientVK
+//  ProfileViewController.swift
+//  GeekMobile
 //
-//  Created by Egor on 10.03.2021.
+//  Created by Egor on 13.03.2021.
 //
 
 import UIKit
 
-class SignUpViewController: UIScrollableViewController {
-    
+class ProfileViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
     
