@@ -21,8 +21,6 @@ class FriendTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        //print("Image width: \(profileImage.frame.width)")
-        //print("Image height: \(profileImage.frame.height)")
         profileImage.layer.cornerRadius = profileImage.frame.width / 2
         profileImage.clipsToBounds = true
     }

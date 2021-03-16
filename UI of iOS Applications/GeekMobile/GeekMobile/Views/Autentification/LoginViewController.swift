@@ -51,6 +51,7 @@ class LoginViewController: UIScrollableViewController {
                 let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBar") as! UITabBarController
                 self.view.window?.rootViewController = viewController
                 self.view.window?.makeKeyAndVisible()
+                //self.performSegue(withIdentifier: "successfullSignIn", sender: sender)
                 
             } else {
                 self.showNotificationAlert(title: "Ошибка входа!",

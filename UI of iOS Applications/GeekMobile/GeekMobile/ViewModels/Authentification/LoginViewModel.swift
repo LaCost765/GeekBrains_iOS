@@ -6,41 +6,41 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol LoginViewModelProtocol {
-    var passwordTip: String { get }
-    func handlePasswordChanged(_ password: String)
-    func isAccessGranted(login: String, password: String) -> Bool
-    var loginButtonEnabled: Bool { get set }
-    var loginButtonEnabledChanged: ((Bool) -> ())? { get set }
+    var model: LoginModel { get }
+    var isSignInButtonEnabled: BehaviorSubject<Bool> { get set }
+    func areFieldsCorrect()
 }
 
 
 class LoginViewModel: LoginViewModelProtocol {
     
     // Properties
-    private let model: LoginModel
-    var passwordTip: String {
-        return model.passwordReqs
-    }
-    var loginButtonEnabled: Bool = false {
-        didSet {
-            loginButtonEnabledChanged?(loginButtonEnabled)
-        }
-    }
-    var loginButtonEnabledChanged: ((Bool) -> ())?
+    let model: LoginModel
+    var isSignInButtonEnabled: BehaviorSubject<Bool>
+    var bag: DisposeBag = DisposeBag()
     
     // Initializers
     init(model: LoginModel) {
         self.model = model
+        isSignInButtonEnabled = BehaviorSubject(value: false)
     }
     
-    // Methods
-    func handlePasswordChanged(_ password: String) {
-        loginButtonEnabled = model.isPasswordValid(password)
+    func areFieldsCorrect() {
+        do {
+            guard let email = try model.email.value() else { return }
+            guard let password = try model.password.value() else { return }
+            
+            let isCorrect =  email.isValid(.email) && password.isValid(.password)
+            isSignInButtonEnabled.onNext(isCorrect)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
-    func isAccessGranted(login: String, password: String) -> Bool {
-        return login == model.adminUsername && password == model.adminPassword
+    func signIn(completion: @escaping (Bool, String?) -> Void) {
+        model.signIn(completion: completion)
     }
 }

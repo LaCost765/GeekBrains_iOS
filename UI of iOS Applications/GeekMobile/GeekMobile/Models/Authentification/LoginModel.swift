@@ -6,37 +6,42 @@
 //
 
 import Foundation
+import Firebase
+import RxSwift
 
 protocol LoginModelProtocol {
-    var username: String? { get set }
-    var password: String? { get set }
-    var passwordReqs: String { get }
-    func isPasswordValid(_ password: String) -> Bool
-}
-
-extension LoginModelProtocol {
-    var adminUsername: String {
-        return "admin"
-    }
-    var adminPassword: String {
-        return "Admin123456"
-    }
+    var email: BehaviorSubject<String?> { get set }
+    var password: BehaviorSubject<String?> { get set }
 }
 
 class LoginModel: LoginModelProtocol {
     
-    // Properties
-    var username: String?
-    var password: String?
-    var passwordReqs: String {
-        return "One big letter, one number, minimum 8 char long"
+    //MARK: Properties
+    var email: BehaviorSubject<String?>
+    var password: BehaviorSubject<String?>
+    
+    init() {
+        email = BehaviorSubject(value: "")
+        password = BehaviorSubject(value: "")
     }
     
-    // Methods
-    func isPasswordValid(_ password: String) -> Bool {
-        let regex = NSPredicate(format: "SELF MATCHES %@ ", "^(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z]).{8,}$")
+    func signIn(completion: @escaping (Bool, String?) -> Void) {
         
-        let result = regex.evaluate(with: password)
-        return result
+        guard case let email?? = self.email.safeValue(),
+              case let password?? = self.password.safeValue() else { return }
+        
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+            
+          guard let strongSelf = self else { return }
+            
+            if let error = error {
+                print(error.localizedDescription)
+                completion(false, error.localizedDescription)
+                return
+            }
+            
+            completion(true, nil)
+          // ...
+        }
     }
 }

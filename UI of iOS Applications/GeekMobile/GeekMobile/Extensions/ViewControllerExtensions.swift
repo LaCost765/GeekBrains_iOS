@@ -15,4 +15,15 @@ extension UIViewController {
         
         return image.pngData()
     }
+    
+    func showNotificationAlert(title: String, message: String, buttonTitle: String, style: UIAlertAction.Style = .default) {
+        
+        let ok = UIAlertAction(title: buttonTitle, style: style)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(ok)
+        
+        DispatchQueue.main.async {
+            self.present(alert, animated: true)
+        }
+    }
 }

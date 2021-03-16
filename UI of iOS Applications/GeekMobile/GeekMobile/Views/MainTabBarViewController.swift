@@ -9,12 +9,21 @@ import UIKit
 
 class MainTabBarViewController: UITabBarController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        CurrentUser.initialize()
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
+    required init?(coder: NSCoder) {
+        CurrentUser.initialize()
+        super.init(coder: coder)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+    }
 
     /*
     // MARK: - Navigation

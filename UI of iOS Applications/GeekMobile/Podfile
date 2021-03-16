@@ -5,7 +5,11 @@ target 'GeekMobile' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for GeekModile
+  # Pods for GeekMobile
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
 end

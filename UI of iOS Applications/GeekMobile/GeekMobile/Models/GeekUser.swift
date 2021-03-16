@@ -15,6 +15,9 @@ protocol UserModel {
     var friendsUIDs: [String] { get set }
     var photos: [String] { get set }
     var uid: String { get set }
+    
+    func loadUserName(callback: @escaping (String) -> Void)
+    func loadUserImage(callback: @escaping (Data?) -> Void)
 }
 
 class GeekUser: UserModel {

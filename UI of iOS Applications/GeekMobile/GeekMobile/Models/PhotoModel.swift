@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+protocol PhotoModel {
+    var id: String { get set }
+    var likes: Int { get set }
+}
