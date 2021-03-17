@@ -11,7 +11,7 @@ import RxCocoa
 
 class ProfileViewController: UIViewController {
 
-    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var profileImageView: RoundedImageView!
     @IBOutlet weak var changeProfileImageButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var addPhotoButton: UIButton!

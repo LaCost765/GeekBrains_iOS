@@ -36,6 +36,7 @@
 		74B20B0225F8DC0C0065BB9F /* UIPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B20B0125F8DC0C0065BB9F /* UIPaddingLabel.swift */; };
 		74BDE4CA25F924E200DEC5E2 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BDE4C925F924E200DEC5E2 /* SignUpViewModel.swift */; };
 		74BDE4CD25F9334100DEC5E2 /* UITitleTextErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BDE4CC25F9334100DEC5E2 /* UITitleTextErrorView.swift */; };
+		74C5AB66260151CF00840259 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5AB65260151CF00840259 /* RoundedImageView.swift */; };
 		74CCC31A25F58510003F0C0C /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCC31925F58510003F0C0C /* ViewControllerExtensions.swift */; };
 		74D1B9DE25F581D800400B67 /* GlobalGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D1B9DD25F581D800400B67 /* GlobalGroupsViewController.swift */; };
 		74F1B56C25F91B3600F5A2EF /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F1B56B25F91B3600F5A2EF /* SignUpModel.swift */; };
@@ -79,6 +80,7 @@
 		74B20B0125F8DC0C0065BB9F /* UIPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPaddingLabel.swift; sourceTree = "<group>"; };
 		74BDE4C925F924E200DEC5E2 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		74BDE4CC25F9334100DEC5E2 /* UITitleTextErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITitleTextErrorView.swift; sourceTree = "<group>"; };
+		74C5AB65260151CF00840259 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		74CCC31925F58510003F0C0C /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		74D1B9DD25F581D800400B67 /* GlobalGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalGroupsViewController.swift; sourceTree = "<group>"; };
 		74F1B56B25F91B3600F5A2EF /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				74B20B0125F8DC0C0065BB9F /* UIPaddingLabel.swift */,
 				7421298025F8F1020057E05C /* UIScrollableViewController.swift */,
 				74BDE4CC25F9334100DEC5E2 /* UITitleTextErrorView.swift */,
+				74C5AB65260151CF00840259 /* RoundedImageView.swift */,
 			);
 			path = CustomElements;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				7435775925F2EFB300380C6D /* FriendViewModel.swift in Sources */,
 				74485BA025EA7FC800EA87E0 /* LoginModel.swift in Sources */,
 				74FD78C425FCE0C500C61A5E /* ProfileViewModel.swift in Sources */,
+				74C5AB66260151CF00840259 /* RoundedImageView.swift in Sources */,
 				74585E2625FC1CAC009D3775 /* ProfileViewController.swift in Sources */,
 				74FD78CD25FCFF6300C61A5E /* FirebaseManager.swift in Sources */,
 				74F1B57425F91EA200F5A2EF /* StringExtensions.swift in Sources */,

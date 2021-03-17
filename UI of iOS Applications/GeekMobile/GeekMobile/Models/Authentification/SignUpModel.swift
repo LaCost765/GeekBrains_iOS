@@ -51,29 +51,12 @@ class SignUpModel: SignUpModelProtocol {
                 return
             }
         
-            self.setNameForCreatedUser(name: name, surname: surname)
+            
             let fbManager = FirebaseManager(userUID: user.uid)
             fbManager.configureDefaultUserState(name: "\(name) \(surname)")
             completion(true, nil)
         }
-    }
-    
-    private func setNameForCreatedUser(name: String, surname: String) {
         
-        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-        changeRequest?.displayName = "\(name) \(surname)"
-        changeRequest?.commitChanges { (error) in
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
-            
-            if let name = Auth.auth().currentUser?.displayName {
-                print("User name: \(name)")
-            }
-            
-            try! Auth.auth().signOut()
-        }
     }
 }
 

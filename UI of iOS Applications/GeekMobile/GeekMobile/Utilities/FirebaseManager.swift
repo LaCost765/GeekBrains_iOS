@@ -59,7 +59,7 @@ class FirebaseManager {
         }
     }
     
-    func uploadImage(imageData: Data) {
+    func uploadImage(imageData: Data, comletion:  (() -> Void)? = nil) {
         
         let ref = self.storage.reference().child("\(self.userUID)/profileImage.png")
         
@@ -68,6 +68,28 @@ class FirebaseManager {
             if let error = error {
                 print("Error: \(error.localizedDescription)")
             }
+            
+            comletion?()
+        }
+    }
+    
+    func setDefaultPhotoForUser(completion: (() -> Void)? = nil) {
+        // Add default user profile picture
+        let ref = self.storage.reference().child("defaultImages/profileImage.png")
+        
+        ref.getData(maxSize: 20 * 1024 * 1024) { data, error in
+            
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let data = data else {
+                print("Error: no data")
+                return
+            }
+            
+            self.uploadImage(imageData: data, comletion: completion)
         }
     }
     
@@ -79,32 +101,24 @@ class FirebaseManager {
         ]
         
         // Add document for user in firestore
-        firestoreDB.collection("users").document(self.userUID).setData(initData) { [weak self] err in
-            
+        firestoreDB.collection("users").document(self.userUID).setData(initData) { err in
+                        
             if let err = err {
                 print("Error: \(err.localizedDescription)")
                 return
             }
+           
+            self.setDefaultPhotoForUser(completion: self.signOut)
             
-            print("Default user state was configured for uid: \(self?.userUID)")
-            
-            // Add default user profile picture
-            let defaultImageRef = self?.storage.reference().child("defaultImages/profileImage.png")
-            
-            defaultImageRef?.getData(maxSize: 20 * 1024 * 1024) { data, error in
-                
-                if let error = error {
-                    print("Error: \(error.localizedDescription)")
-                    return
-                }
-                
-                guard let data = data else {
-                    print("Error: no data")
-                    return
-                }
-                
-                self?.uploadImage(imageData: data)
-            }
+        }
+    }
+    
+    func signOut() {
+        
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            print("Error: \(error.localizedDescription)")
         }
     }
 }

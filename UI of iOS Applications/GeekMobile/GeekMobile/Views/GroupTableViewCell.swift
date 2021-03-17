@@ -29,11 +29,11 @@ class GroupTableViewCell: UITableViewCell {
         viewModel!.title.bind(to: titleLabel.rx.text).disposed(by: viewModel!.bag)
         viewModel!.subtitle.bind(to: subtitleLabel.rx.text).disposed(by: viewModel!.bag)
         
-        viewModel!.image.bind { [unowned self] data in
+        viewModel!.image.bind { [weak self] data in
             guard let data = data else { return }
             DispatchQueue.main.async { /// execute on main thread
-                self.profileImageView.image = UIImage(data: data)
-                self.profileImageView.setNeedsDisplay()
+                self?.profileImageView.image = UIImage(data: data)
+                self?.profileImageView.setNeedsDisplay()
             }
         }.disposed(by: viewModel!.bag)
     }

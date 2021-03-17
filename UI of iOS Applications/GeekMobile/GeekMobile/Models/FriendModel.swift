@@ -56,10 +56,10 @@ class FriendModel: FriendProtocol {
         
         if let url = URL(string: url) {
             
-            let task = URLSession.shared.dataTask(with: url) { [unowned self] data, resp, err in
+            let task = URLSession.shared.dataTask(with: url) { [weak self] data, resp, err in
                 guard let data = data, err == nil else { return }
-                self.userPhotos.append(data)
-                self.loadImages()
+                self?.userPhotos.append(data)
+                self?.loadImages()
             }
             
             task.resume()

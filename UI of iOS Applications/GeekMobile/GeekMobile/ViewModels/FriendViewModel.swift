@@ -35,9 +35,9 @@ class FriendViewModel: FriendViewModelProtocol {
     
     func setProfileImage(with url: String) {
         if let url = URL(string: url) {
-            let task = URLSession.shared.dataTask(with: url) { [unowned self] data, resp, err in
+            let task = URLSession.shared.dataTask(with: url) { [weak self] data, resp, err in
                 guard let data = data, err == nil else { return }
-                self.profileImage.onNext(data)
+                self?.profileImage.onNext(data)
             }
             
             task.resume()
@@ -45,8 +45,8 @@ class FriendViewModel: FriendViewModelProtocol {
     }
     
     func loadImages() {
-        DispatchQueue.global().async { [unowned self] in
-            self.model.loadImages()
+        DispatchQueue.global().async { [weak self] in
+            self?.model.loadImages()
         }
     }
 }

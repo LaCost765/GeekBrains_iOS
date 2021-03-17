@@ -12,7 +12,7 @@ import RxCocoa
 class FriendTableViewCell: UITableViewCell {
     
     @IBOutlet weak var fullNameLabel: UILabel!
-    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileImage: RoundedImageView!
     
     var viewModel: FriendViewModel?
     
@@ -30,11 +30,11 @@ class FriendTableViewCell: UITableViewCell {
         
         viewModel!.fullName.bind(to: fullNameLabel.rx.text).disposed(by: bag)
         
-        viewModel!.profileImage.bind { [unowned self] data in
+        viewModel!.profileImage.bind { [weak self] data in
             guard let data = data else { return }
             DispatchQueue.main.async { /// execute on main thread
-                self.profileImage.image = UIImage(data: data)
-                self.profileImage.setNeedsDisplay()
+                self?.profileImage.image = UIImage(data: data)
+                self?.profileImage.setNeedsDisplay()
             }
         }.disposed(by: bag)
     }
