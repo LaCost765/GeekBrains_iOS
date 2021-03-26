@@ -7,7 +7,7 @@
 
 import UIKit
 
-@IBDesignable class RoundedImageView: UIView {
+@IBDesignable class CustomImageView: UIView {
 
     var imageView: UIImageView = UIImageView()
     
@@ -54,6 +54,23 @@ import UIKit
         super.awakeFromNib()
         addSubview(imageView)
         backgroundColor = .clear
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+
+        UIView.animate(withDuration: 0.2){
+            tappedImage.transform = CGAffineTransform.identity.scaledBy(x: 0.8, y: 0.8)
+        }
+        
+        UIView.animate(withDuration: 0.5, delay: 0.2, usingSpringWithDamping: 0.35, initialSpringVelocity: 0, options: [], animations: {
+            tappedImage.transform = CGAffineTransform.identity
+        }, completion: nil)
     }
     
     override func layoutSubviews() {
