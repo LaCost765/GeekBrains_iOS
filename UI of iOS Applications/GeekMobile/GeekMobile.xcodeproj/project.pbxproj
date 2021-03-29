@@ -11,6 +11,7 @@
 		740A997B260CA99A002E8FC0 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740A997A260CA99A002E8FC0 /* NewsTableViewController.swift */; };
 		740A997E260CA9F7002E8FC0 /* NewsItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740A997D260CA9F7002E8FC0 /* NewsItemModel.swift */; };
 		740A9981260CAFE8002E8FC0 /* NewsItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740A9980260CAFE8002E8FC0 /* NewsItemTableViewCell.swift */; };
+		740A9986260CCC1A002E8FC0 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740A9985260CCC1A002E8FC0 /* IndicatorView.swift */; };
 		741CC96325FD0F3300952E15 /* GeekUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741CC96225FD0F3300952E15 /* GeekUser.swift */; };
 		7421298125F8F1020057E05C /* UIScrollableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7421298025F8F1020057E05C /* UIScrollableViewController.swift */; };
 		74288E6E25F9DB9A0058DC2C /* RxExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74288E6D25F9DB9A0058DC2C /* RxExtensions.swift */; };
@@ -39,7 +40,7 @@
 		74B20B0225F8DC0C0065BB9F /* UIPaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B20B0125F8DC0C0065BB9F /* UIPaddingLabel.swift */; };
 		74BDE4CA25F924E200DEC5E2 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BDE4C925F924E200DEC5E2 /* SignUpViewModel.swift */; };
 		74BDE4CD25F9334100DEC5E2 /* UITitleTextErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BDE4CC25F9334100DEC5E2 /* UITitleTextErrorView.swift */; };
-		74C5AB66260151CF00840259 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5AB65260151CF00840259 /* RoundedImageView.swift */; };
+		74C5AB66260151CF00840259 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5AB65260151CF00840259 /* CustomImageView.swift */; };
 		74CCC31A25F58510003F0C0C /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCC31925F58510003F0C0C /* ViewControllerExtensions.swift */; };
 		74D1B9DE25F581D800400B67 /* GlobalGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D1B9DD25F581D800400B67 /* GlobalGroupsViewController.swift */; };
 		74F1B56C25F91B3600F5A2EF /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F1B56B25F91B3600F5A2EF /* SignUpModel.swift */; };
@@ -56,6 +57,7 @@
 		740A997A260CA99A002E8FC0 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		740A997D260CA9F7002E8FC0 /* NewsItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemModel.swift; sourceTree = "<group>"; };
 		740A9980260CAFE8002E8FC0 /* NewsItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemTableViewCell.swift; sourceTree = "<group>"; };
+		740A9985260CCC1A002E8FC0 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		741CC96225FD0F3300952E15 /* GeekUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeekUser.swift; sourceTree = "<group>"; };
 		7421298025F8F1020057E05C /* UIScrollableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollableViewController.swift; sourceTree = "<group>"; };
 		74288E6D25F9DB9A0058DC2C /* RxExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxExtensions.swift; sourceTree = "<group>"; };
@@ -86,7 +88,7 @@
 		74B20B0125F8DC0C0065BB9F /* UIPaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPaddingLabel.swift; sourceTree = "<group>"; };
 		74BDE4C925F924E200DEC5E2 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		74BDE4CC25F9334100DEC5E2 /* UITitleTextErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITitleTextErrorView.swift; sourceTree = "<group>"; };
-		74C5AB65260151CF00840259 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		74C5AB65260151CF00840259 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		74CCC31925F58510003F0C0C /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		74D1B9DD25F581D800400B67 /* GlobalGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalGroupsViewController.swift; sourceTree = "<group>"; };
 		74F1B56B25F91B3600F5A2EF /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				74D1B9DD25F581D800400B67 /* GlobalGroupsViewController.swift */,
 				74585E2125FC05B9009D3775 /* MainTabBarViewController.swift */,
 				74585E2525FC1CAC009D3775 /* ProfileViewController.swift */,
+				740A9985260CCC1A002E8FC0 /* IndicatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,7 +227,7 @@
 				74B20B0125F8DC0C0065BB9F /* UIPaddingLabel.swift */,
 				7421298025F8F1020057E05C /* UIScrollableViewController.swift */,
 				74BDE4CC25F9334100DEC5E2 /* UITitleTextErrorView.swift */,
-				74C5AB65260151CF00840259 /* RoundedImageView.swift */,
+				74C5AB65260151CF00840259 /* CustomImageView.swift */,
 			);
 			path = CustomElements;
 			sourceTree = "<group>";
@@ -396,9 +399,10 @@
 				7435775925F2EFB300380C6D /* FriendViewModel.swift in Sources */,
 				74485BA025EA7FC800EA87E0 /* LoginModel.swift in Sources */,
 				74FD78C425FCE0C500C61A5E /* ProfileViewModel.swift in Sources */,
-				74C5AB66260151CF00840259 /* RoundedImageView.swift in Sources */,
+				74C5AB66260151CF00840259 /* CustomImageView.swift in Sources */,
 				74585E2625FC1CAC009D3775 /* ProfileViewController.swift in Sources */,
 				74FD78CD25FCFF6300C61A5E /* FirebaseManager.swift in Sources */,
+				740A9986260CCC1A002E8FC0 /* IndicatorView.swift in Sources */,
 				74F1B57425F91EA200F5A2EF /* StringExtensions.swift in Sources */,
 				74585E2225FC05B9009D3775 /* MainTabBarViewController.swift in Sources */,
 				740A9981260CAFE8002E8FC0 /* NewsItemTableViewCell.swift in Sources */,

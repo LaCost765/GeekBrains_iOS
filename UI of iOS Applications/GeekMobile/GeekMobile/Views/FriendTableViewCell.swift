@@ -12,7 +12,7 @@ import RxCocoa
 class FriendTableViewCell: UITableViewCell {
     
     @IBOutlet weak var fullNameLabel: UILabel!
-    @IBOutlet weak var profileImage: RoundedImageView!
+    @IBOutlet weak var profileImage: CustomImageView!
     
     var viewModel: FriendViewModel?
     
@@ -20,9 +20,6 @@ class FriendTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        profileImage.layer.cornerRadius = profileImage.frame.width / 2
-        profileImage.clipsToBounds = true
     }
     
     func configureViewModel(viewModel vm: FriendViewModel) {
