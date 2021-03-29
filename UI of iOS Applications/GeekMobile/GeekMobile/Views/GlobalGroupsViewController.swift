@@ -9,11 +9,16 @@ import UIKit
 
 class GlobalGroupsViewController: UITableViewController {
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     var groups: [GroupModel] = []
+    var filteredData: [GroupModel]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        searchBar.delegate = self
+        
         self.groups = [
             GroupModel(title: "GeekBrains", subtitle: "Образование", image: convertImageToData(named: "GeekBrains")),
             GroupModel(title: "Apple", subtitle: "Технологии", image: convertImageToData(named: "Apple")),
@@ -24,6 +29,8 @@ class GlobalGroupsViewController: UITableViewController {
             GroupModel(title: "Лепра", subtitle: "Юмор", image: convertImageToData(named: "Lepra")),
             GroupModel(title: "Meduza", subtitle: "СМИ", image: convertImageToData(named: "Meduza")),
         ]
+        
+        self.filteredData = self.groups
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -41,21 +48,21 @@ class GlobalGroupsViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return groups.count
+        return filteredData.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GlobalGroupCell", for: indexPath) as! GroupTableViewCell
         
-        cell.configureViewModel(viewModel: GroupViewModel(model: groups[indexPath.row]))
-
+        cell.configureViewModel(viewModel: GroupViewModel(model: filteredData[indexPath.row]))
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "addGroup", sender: groups[indexPath.row])
+        performSegue(withIdentifier: "addGroup", sender: filteredData[indexPath.row])
     }
     
 
@@ -110,6 +117,24 @@ class GlobalGroupsViewController: UITableViewController {
             userGroupsVC.addNewGroup(group: group)
         }
     }
-    
+}
 
+extension GlobalGroupsViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchText == "" {
+            filteredData = groups
+        } else {
+            filteredData = []
+            for group in groups {
+                 
+                if group.title.lowercased().contains(searchText.lowercased()) {
+                    filteredData.append(group)
+                }
+            }
+        }
+        
+        self.tableView.reloadData()
+    }
 }

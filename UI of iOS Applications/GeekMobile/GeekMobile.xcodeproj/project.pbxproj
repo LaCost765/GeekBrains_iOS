@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5213F5CD75D7A7A477A0416C /* Pods_GeekMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38482453CC040E5E1A26C4F3 /* Pods_GeekMobile.framework */; };
+		740A997B260CA99A002E8FC0 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740A997A260CA99A002E8FC0 /* NewsTableViewController.swift */; };
+		740A997E260CA9F7002E8FC0 /* NewsItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740A997D260CA9F7002E8FC0 /* NewsItemModel.swift */; };
+		740A9981260CAFE8002E8FC0 /* NewsItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740A9980260CAFE8002E8FC0 /* NewsItemTableViewCell.swift */; };
 		741CC96325FD0F3300952E15 /* GeekUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741CC96225FD0F3300952E15 /* GeekUser.swift */; };
 		7421298125F8F1020057E05C /* UIScrollableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7421298025F8F1020057E05C /* UIScrollableViewController.swift */; };
 		74288E6E25F9DB9A0058DC2C /* RxExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74288E6D25F9DB9A0058DC2C /* RxExtensions.swift */; };
@@ -50,6 +53,9 @@
 /* Begin PBXFileReference section */
 		12DFD2ECF2E5252615437E52 /* Pods-GeekMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekMobile.debug.xcconfig"; path = "Target Support Files/Pods-GeekMobile/Pods-GeekMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		38482453CC040E5E1A26C4F3 /* Pods_GeekMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		740A997A260CA99A002E8FC0 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		740A997D260CA9F7002E8FC0 /* NewsItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemModel.swift; sourceTree = "<group>"; };
+		740A9980260CAFE8002E8FC0 /* NewsItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemTableViewCell.swift; sourceTree = "<group>"; };
 		741CC96225FD0F3300952E15 /* GeekUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeekUser.swift; sourceTree = "<group>"; };
 		7421298025F8F1020057E05C /* UIScrollableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollableViewController.swift; sourceTree = "<group>"; };
 		74288E6D25F9DB9A0058DC2C /* RxExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxExtensions.swift; sourceTree = "<group>"; };
@@ -113,6 +119,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		740A9979260CA986002E8FC0 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				740A997A260CA99A002E8FC0 /* NewsTableViewController.swift */,
+				740A9980260CAFE8002E8FC0 /* NewsItemTableViewCell.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
 		74485B7925EA7AD600EA87E0 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +185,7 @@
 				74FD78C925FCFDBB00C61A5E /* PhotoModel.swift */,
 				741CC96225FD0F3300952E15 /* GeekUser.swift */,
 				7478855625FF632500B3A798 /* CurrentUser.swift */,
+				740A997D260CA9F7002E8FC0 /* NewsItemModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,6 +193,7 @@
 		74485B9C25EA7F4500EA87E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				740A9979260CA986002E8FC0 /* News */,
 				74585E2425FC1C67009D3775 /* Autentification */,
 				74B20B0025F8DB5E0065BB9F /* CustomElements */,
 				7443E10725F2EC5300445507 /* FriendTableViewCell.swift */,
@@ -384,6 +401,8 @@
 				74FD78CD25FCFF6300C61A5E /* FirebaseManager.swift in Sources */,
 				74F1B57425F91EA200F5A2EF /* StringExtensions.swift in Sources */,
 				74585E2225FC05B9009D3775 /* MainTabBarViewController.swift in Sources */,
+				740A9981260CAFE8002E8FC0 /* NewsItemTableViewCell.swift in Sources */,
+				740A997E260CA9F7002E8FC0 /* NewsItemModel.swift in Sources */,
 				7478855725FF632500B3A798 /* CurrentUser.swift in Sources */,
 				7443E10825F2EC5300445507 /* FriendTableViewCell.swift in Sources */,
 				74B20AFE25F8D9B40065BB9F /* SignUpViewController.swift in Sources */,
@@ -391,6 +410,7 @@
 				7443EE2B25F56FF6001713A9 /* UserGroupsViewController.swift in Sources */,
 				74485BA725EA87DD00EA87E0 /* LoginViewController.swift in Sources */,
 				74288E6E25F9DB9A0058DC2C /* RxExtensions.swift in Sources */,
+				740A997B260CA99A002E8FC0 /* NewsTableViewController.swift in Sources */,
 				74B20B0225F8DC0C0065BB9F /* UIPaddingLabel.swift in Sources */,
 				74FD78CA25FCFDBB00C61A5E /* PhotoModel.swift in Sources */,
 				74BDE4CA25F924E200DEC5E2 /* SignUpViewModel.swift in Sources */,

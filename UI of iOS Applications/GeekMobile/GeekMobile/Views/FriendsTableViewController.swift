@@ -16,11 +16,41 @@ class FriendsTableViewController: UITableViewController {
         FriendModel(name: "Никита", surname: "Орлов"),
         FriendModel(name: "Коля", surname: "Иванов"),
         FriendModel(name: "Оксана", surname: "Минина"),
+        FriendModel(name: "Владимир", surname: "Путин"),
+        FriendModel(name: "Алла", surname: "Пугачева"),
+        FriendModel(name: "Верка", surname: "Сердючка"),
+        FriendModel(name: "Филипп", surname: "Киркоров"),
+        FriendModel(name: "Иосиф", surname: "Сталин"),
+        FriendModel(name: "Николай", surname: "Романов"),
+        FriendModel(name: "Олег", surname: "Тинькофф"),
+        FriendModel(name: "Евгений", surname: "Понасенков"),
+        FriendModel(name: "Алексей", surname: "Навальный"),
     ]
+    
+    private var friendsDict = [Character:[FriendModel]]()
+    private var sortedKeys = [Character]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        for friend in friends {
+            
+            guard let char = friend.surname.first else { continue }
+            
+            if friendsDict[char] == nil {
+                friendsDict[char] = []
+                sortedKeys.append(char)
+                sortedKeys.sort()
+            }
+            
+            friendsDict[char]!.append(friend)
+            friendsDict[char]!.sort { first, second in first.surname < second.surname}
+            
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView.reloadData()
+            }
+        }
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -31,19 +61,40 @@ class FriendsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return sortedKeys.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return friends.count
+        
+        if section >= sortedKeys.count {
+            return 0
+        }
+        
+        let key = sortedKeys[section]
+        
+        if friendsDict[key] == nil {
+            return 0
+        } else {
+            return friendsDict[key]!.count
+        }
     }
 
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 32
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        return sortedKeys[section].uppercased()
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as! FriendTableViewCell
 
-        let name = friends[indexPath.row].name
-        let surname = friends[indexPath.row].surname
+        let friend = friendsDict[sortedKeys[indexPath.section]]?[indexPath.row]
+        
+        let name = friend?.name ?? ""
+        let surname = friend?.surname ?? ""
         cell.configureViewModel(viewModel: FriendViewModel(model: FriendModel(name: name, surname: surname, photosCount: 8)))
         
         cell.setProfileImage(with: "https://i.pravatar.cc/300")
@@ -105,6 +156,4 @@ class FriendsTableViewController: UITableViewController {
             vc.photos = friendPhotos
         }
     }
-    
-
 }
