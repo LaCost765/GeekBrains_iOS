@@ -27,3 +27,10 @@ extension UIViewController {
         }
     }
 }
+
+extension UIView {
+    
+    var rootView: UIView {
+        return self.superview?.rootView ?? self
+    }
+}

@@ -25,15 +25,27 @@ class PhotosViewController: UICollectionViewController {
         // Do any additional setup after loading the view.
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "BrowsePhoto" {
+            
+            guard let cell = sender as? PhotoCollectionViewCell else { return }
+            guard let customSegue = segue as? CustomSegue else { return }
+            guard let animatedVC = segue.destination as? AnimatedPhotosViewController else { return }
+            
+            let navBarHeight = (self.navigationController?.navigationBar.frame.height ?? 0) + (view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0)
+            
+            let frame = CGRect(x: cell.frame.origin.x, y: cell.frame.origin.y + navBarHeight, width: cell.frame.width, height: cell.frame.height)
+            
+            customSegue.startFrame = frame
+            animatedVC.images = photos
+            animatedVC.currentImageIndex = collectionView.indexPath(for: cell)?.item ?? 0
+        }
     }
-    */
 
     // MARK: UICollectionViewDataSource
 
@@ -91,4 +103,12 @@ class PhotosViewController: UICollectionViewController {
     }
     */
 
+}
+
+extension PhotosViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: collectionView.frame.width / 3 - 5, height: collectionView.frame.height / 3 - 5)
+    }
 }
