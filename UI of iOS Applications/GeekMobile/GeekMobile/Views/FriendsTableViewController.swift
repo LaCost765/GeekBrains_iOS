@@ -150,10 +150,10 @@ class FriendsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "FriendPhotos" {
             guard let senderCell = sender as? FriendTableViewCell else { return }
-            guard let vc = segue.destination as? PhotosViewController else { return }
+            guard let vc = segue.destination as? AnimatedPhotosViewController else { return }
             
             let friendPhotos = senderCell.getPhotos()
-            vc.photos = friendPhotos
+            vc.images = friendPhotos
         }
     }
 }
