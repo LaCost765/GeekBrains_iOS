@@ -28,7 +28,7 @@ class AnimatedPhotosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        foregroundImageView.image = images[0]
+        foregroundImageView.image = images[currentImageIndex]
         
         setDefaultBackgroundTransform(for: .left)
         let recognizer = UIPanGestureRecognizer(target: self, action: #selector(onPan(_:)))
