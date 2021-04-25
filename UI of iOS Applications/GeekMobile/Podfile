@@ -12,4 +12,6 @@ target 'GeekMobile' do
   pod 'RxCocoa'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
 end

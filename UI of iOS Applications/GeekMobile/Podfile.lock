@@ -212,6 +212,7 @@ PODS:
     - abseil/base/base_internal
     - abseil/base/config
     - abseil/meta/type_traits
+  - Alamofire (5.4.2)
   - BoringSSL-GRPC (0.0.7):
     - BoringSSL-GRPC/Implementation (= 0.0.7)
     - BoringSSL-GRPC/Interface (= 0.0.7)
@@ -342,18 +343,22 @@ PODS:
   - RxRelay (6.1.0):
     - RxSwift (= 6.1.0)
   - RxSwift (6.1.0)
+  - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
+  - Alamofire
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Firestore
   - Firebase/Storage
   - RxCocoa
   - RxSwift
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
     - abseil
+    - Alamofire
     - BoringSSL-GRPC
     - Firebase
     - FirebaseAnalytics
@@ -375,9 +380,11 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
+  Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
   Firebase: cd2ab85eec8170dc260186159f21072ecb679ad5
   FirebaseAnalytics: f3f8f75de34fe04141a69bb1c4bd7e24a80178e1
@@ -399,7 +406,8 @@ SPEC CHECKSUMS:
   RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
   RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
   RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 2b12a32ff8920ed68708f1eb1a4d57918586bb0f
+PODFILE CHECKSUM: d2ac82ec013fdff102f103560c9e52962510d3fc
 
 COCOAPODS: 1.10.1

@@ -11,8 +11,8 @@ class UserSession {
     
     static var shared: UserSession = UserSession()
     
-    private var vkToken: String?
-    private var userID: Int?
+    public var vkToken: String?
+    public var userID: Int?
     
     private init() {
         

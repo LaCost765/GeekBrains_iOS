@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KCt-WU-kY9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uce-2E-SjI">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -10,6 +10,111 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--AuthVK View Controller-->
+        <scene sceneID="vTE-fE-fe0">
+            <objects>
+                <viewController id="uce-2E-SjI" customClass="AuthVKViewController" customModule="GeekMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PR9-kw-N1i">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NjS-GW-Ugw">
+                                <rect key="frame" x="0.0" y="44" width="428" height="848"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="49D-1c-zmG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NjS-GW-Ugw" firstAttribute="top" secondItem="49D-1c-zmG" secondAttribute="top" id="3tZ-ce-ukQ"/>
+                            <constraint firstItem="NjS-GW-Ugw" firstAttribute="leading" secondItem="49D-1c-zmG" secondAttribute="leading" id="5JO-ha-Zv4"/>
+                            <constraint firstItem="49D-1c-zmG" firstAttribute="trailing" secondItem="NjS-GW-Ugw" secondAttribute="trailing" id="E7f-nc-pTI"/>
+                            <constraint firstItem="49D-1c-zmG" firstAttribute="bottom" secondItem="NjS-GW-Ugw" secondAttribute="bottom" id="eni-Li-xTk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="NjS-GW-Ugw" id="UUj-pS-X3w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CDV-5W-ijA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-109" y="-775"/>
+        </scene>
+        <!--RequestAPI View Controller-->
+        <scene sceneID="1OK-bR-hkA">
+            <objects>
+                <viewController storyboardIdentifier="API_VC" id="dlh-JO-ixc" customClass="RequestAPIViewController" customModule="GeekMobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jaM-Qd-hVJ">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UXd-4e-0N6">
+                                <rect key="frame" x="110" y="346" width="208" height="234"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMK-on-5Er">
+                                        <rect key="frame" x="0.0" y="0.0" width="208" height="30"/>
+                                        <state key="normal" title="Получить список друзей"/>
+                                        <connections>
+                                            <action selector="getFriends:" destination="dlh-JO-ixc" eventType="touchUpInside" id="a3h-GY-gku"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfB-s9-uzp">
+                                        <rect key="frame" x="0.0" y="50" width="208" height="30"/>
+                                        <state key="normal" title="Получить фотографии"/>
+                                        <connections>
+                                            <action selector="getPhotos:" destination="dlh-JO-ixc" eventType="touchUpInside" id="KwW-fP-bqu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es7-Y0-kTP">
+                                        <rect key="frame" x="0.0" y="100" width="208" height="30"/>
+                                        <state key="normal" title="Получить группы"/>
+                                        <connections>
+                                            <action selector="getGroups:" destination="dlh-JO-ixc" eventType="touchUpInside" id="kDv-o2-chU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yk8-iG-k7u">
+                                        <rect key="frame" x="0.0" y="150" width="208" height="30"/>
+                                        <state key="normal" title="Получить группы по запросу"/>
+                                        <connections>
+                                            <action selector="getGroupsBySearchQuery:" destination="dlh-JO-ixc" eventType="touchUpInside" id="cs5-lZ-r5I"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dcN-HB-liD">
+                                        <rect key="frame" x="0.0" y="200" width="208" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="208" id="Vwl-0g-P0M"/>
+                                    <constraint firstAttribute="height" constant="234" id="xbc-I5-Sbe"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KW0-wR-rOh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UXd-4e-0N6" firstAttribute="centerY" secondItem="jaM-Qd-hVJ" secondAttribute="centerY" id="RFk-co-S3X"/>
+                            <constraint firstItem="UXd-4e-0N6" firstAttribute="centerX" secondItem="jaM-Qd-hVJ" secondAttribute="centerX" id="zVW-fc-m9B"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="getFriendsButton" destination="gMK-on-5Er" id="NnK-cN-CHf"/>
+                        <outlet property="getGroupsButton" destination="Es7-Y0-kTP" id="CZL-0u-dlw"/>
+                        <outlet property="getGroupsBySearchButton" destination="Yk8-iG-k7u" id="7Bb-A5-GCt"/>
+                        <outlet property="getPhotosButton" destination="rfB-s9-uzp" id="7uG-Fu-Vc6"/>
+                        <outlet property="searchTextField" destination="dcN-HB-liD" id="HI1-ZK-GY7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XZG-RV-vc9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="831" y="-763"/>
+        </scene>
         <!--Авторизация-->
         <scene sceneID="pba-nb-Unb">
             <objects>
@@ -280,7 +385,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ABv-QL-6uG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="457.00934579439252" y="57.667386609071279"/>
+            <point key="canvasLocation" x="402" y="58"/>
         </scene>
         <!--Регистрация-->
         <scene sceneID="Lqf-sX-VxJ">
